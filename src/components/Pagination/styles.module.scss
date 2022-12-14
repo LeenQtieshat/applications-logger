@@ -1,0 +1,28 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.pagination {
+  @include flex-center;
+  margin-top: 2rem;
+
+  .pageItem {
+    @include flex-center;
+    padding: 0.5rem;
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 2.5rem;
+    cursor: pointer;
+
+    transition: all 0.5s;
+    border-radius: 0.2rem;
+    & .active {
+      background-color: red;
+    }
+    &:hover {
+      transform: scale(1.01);
+      background-color: transparent;
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  }
+}

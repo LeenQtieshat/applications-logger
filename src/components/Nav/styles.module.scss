@@ -1,0 +1,39 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.pagesNavigator {
+  padding: 1.2rem 0;
+  border-bottom: 0.2rem solid $color-primary;
+  border-radius: 0.3rem;
+  display: flex;
+  margin-bottom: 1.5rem;
+  div {
+    @include flex-x-center;
+  }
+
+  li {
+    list-style-type: none;
+    transition: 0.5 all;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-weight: 50rem;
+    max-width: 14rem;
+    a {
+      color: $color-link;
+      @include flex-space-between;
+      align-items: center;
+      text-decoration: none;
+
+      &.active {
+        color: #7c8495ed;
+      }
+    }
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

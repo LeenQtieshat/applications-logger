@@ -1,0 +1,120 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.table {
+  text-align: left;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  box-shadow: 0rem 0.9rem 2.8rem -1.5rem $color-shadow;
+  -webkit-box-shadow: 0rem 0.9rem 2.8rem -1.5rem $color-shadow;
+  -moz-box-shadow: 0rem 0.9rem 2.8rem -1.5rem $color-shadow;
+  color: $color-text-primary;
+  .nullField {
+    color: $color-primary;
+  }
+  tbody {
+    tr {
+      border-bottom: 0.1rem solid $color-primary;
+    }
+
+    td {
+      padding: 1.8rem 0 1.8rem 1.5rem;
+    }
+  }
+
+  thead {
+    tr {
+      th {
+        padding: 1.8rem 0 1.8rem 1.5rem;
+        border-bottom: 0.1rem solid $color-primary;
+      }
+      @media screen and (max-width: 1000px) {
+        th {
+          font-size: 1.3rem;
+          display: none;
+        }
+      }
+    }
+  }
+
+  .arrowContainer {
+    background-color: $color-primary;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 0.4rem;
+    svg {
+      color: $color-link;
+    }
+  }
+  @media screen and (max-width: 1040px) {
+    .arrowContainer {
+      @include flex-center;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .table {
+    box-shadow: none;
+    width: 90%;
+    margin: auto;
+  }
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    font-size: 1.6rem;
+    display: block;
+    padding: 0.5rem;
+  }
+  .table tr {
+    position: relative;
+  }
+  .table td {
+    text-align: right;
+    padding-right: 0.5rem;
+    width: 50%;
+    margin-left: 50%;
+    text-align: left;
+  }
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0.6rem;
+  }
+
+  .table tr {
+    margin-bottom: 0.4rem;
+    box-shadow: 0rem 0.9rem 2.8rem -1.5rem $color-shadow;
+    -webkit-box-shadow: 0rem 0.9rem 2.8rem -1.5rem $color-shadow;
+    -moz-box-shadow: 0rem 0.9rem 2.8rem -1.5rem $color-shadow;
+  }
+  .table td {
+    border-bottom: 0.2rem solid $color-primary;
+    border-left: 0.1rem solid $color-primary;
+    .table td:hover {
+      transform: scale(1.1);
+    }
+  }
+  .table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .table {
+    width: 100%;
+  }
+
+  .table td {
+    word-wrap: break-word;
+    background-color: $color-white;
+    width: 60%;
+    margin-left: 40%;
+  }
+}

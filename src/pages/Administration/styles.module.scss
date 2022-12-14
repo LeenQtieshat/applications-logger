@@ -1,0 +1,23 @@
+.btn {
+  padding: 1rem;
+  border-radius: 0.4rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: -1px 14px 5px -2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -1px 14px 5px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 14px 5px -2px rgba(0, 0, 0, 0.75);
+  }
+  &:active {
+    transform: translateY(0.4rem);
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+  }
+  a {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,32 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  color: #000000;
+}
+
+.appContainer {
+  width: 98%;
+  margin: auto;
+  font-size: 1.5rem;
+
+  @media screen and (max-width: 1020px) {
+    font-size: 1.2rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    background: black;
+  }
+}
