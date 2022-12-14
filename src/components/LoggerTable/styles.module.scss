@@ -118,3 +118,16 @@
     margin-left: 40%;
   }
 }
+
+@media screen and (max-width: 620px) {
+  .table {
+    width: 100%;
+  }
+
+  .table td {
+    word-wrap: break-word;
+    background-color: $color-white;
+    width: 40%;
+    margin-left: 60%;
+  }
+}
